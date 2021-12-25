@@ -3,7 +3,7 @@ import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../styles/global";
 import { theme } from "../styles/theme";
-import { Layout } from "../components/layout";
+import { Layout } from "../components/Layout";
 import { siteMap } from "../data/sitemap";
 
 function MyApp({ Component, pageProps }: AppProps) {
