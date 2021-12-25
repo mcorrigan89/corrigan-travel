@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import styled from 'styled-components'
-import { Header } from '../components/header';
+import { Header } from '../components/Header';
 import { siteMap } from '../data/sitemap';
 
 const StyledDiv = styled.div`

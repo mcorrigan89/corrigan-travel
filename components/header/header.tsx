@@ -2,11 +2,12 @@ import React from "react";
 import Link from "next/link";
 
 import {
+  HeaderWrapper,
   HeaderContainer,
   HeaderTitle,
   NavigationWrapper,
   NavigationItem,
-} from "./header.styles";
+} from "./Header.styles";
 
 export interface HeaderProps {
   title: string;
@@ -18,15 +19,17 @@ export interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ title, navigationItems }) => {
   return (
-    <HeaderContainer>
-      <HeaderTitle>{title}</HeaderTitle>
-      <NavigationWrapper>
-        {navigationItems.map(({ title, page }) => (
-          <Link key={page} href={`/${page}`} passHref>
-            <NavigationItem>{title}</NavigationItem>
-          </Link>
-        ))}
-      </NavigationWrapper>
-    </HeaderContainer>
+    <HeaderWrapper>
+      <HeaderContainer>
+        <HeaderTitle>{title}</HeaderTitle>
+        <NavigationWrapper>
+          {navigationItems.map(({ title, page }) => (
+            <Link key={page} href={`/${page}`} passHref>
+              <NavigationItem>{title}</NavigationItem>
+            </Link>
+          ))}
+        </NavigationWrapper>
+      </HeaderContainer>
+    </HeaderWrapper>
   );
 };
