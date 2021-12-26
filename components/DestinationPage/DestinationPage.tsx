@@ -3,9 +3,11 @@ import { useDestinationPageController } from "./DestinationPage.controller";
 import {
   DestinationPageWrapper,
   DestinationPageTitle,
+  DestinationPageLink,
   DestinationPageText,
 } from "./DestinationPage.styled";
 import { Location } from "../../data/sitemap";
+import Link from "next/link";
 
 interface DestinationPageProps {
   active: boolean;
@@ -22,9 +24,13 @@ export const DestinationPage: React.FC<DestinationPageProps> = ({
     if (active) {
       setLocation(location);
     }
-  }, [active])
+  }, [active]);
   return (
-    <DestinationPageWrapper id={location.slug} ref={pageRef} onClick={() => setLocation(location)}>
+    <DestinationPageWrapper
+      id={location.slug}
+      ref={pageRef}
+      onClick={() => setLocation(location)}
+    >
       <DestinationPageTitle>{location.title}</DestinationPageTitle>
       {location.text ? (
         <>
@@ -34,6 +40,9 @@ export const DestinationPage: React.FC<DestinationPageProps> = ({
           <DestinationPageText>{location.text}</DestinationPageText>
         </>
       ) : null}
+      <Link href={`/destinations/${location.slug}`} passHref>
+        <DestinationPageLink>More...</DestinationPageLink>
+      </Link>
     </DestinationPageWrapper>
   );
 };
