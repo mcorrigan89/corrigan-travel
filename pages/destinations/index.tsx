@@ -23,7 +23,7 @@ const Destinations: NextPage = () => {
   const isElementOnScreen = (id: string) => {
     const element = document.getElementById(id);
     const bounds = element ? element.getBoundingClientRect() : null;
-    return bounds ? bounds.top < window.innerHeight && bounds.bottom > 240 : false;
+    return bounds ? bounds.top < window.innerHeight - 240 && bounds.bottom > 240 : false;
   }
 
   globalThis.onscroll = () => {

@@ -34,7 +34,7 @@ export const useMapService = (
     const mapContainer = new Map({
       accessToken: process.env.NEXT_PUBLIC_MAPBOX_KEY,
       container: mapRef.current,
-      style: "mapbox://styles/mapbox/dark-v10",
+      style: process.env.NEXT_PUBLIC_MAPBOX_STYLE,
       attributionControl: false,
       interactive: false,
       zoom: initialLocation?.mapProps.zoom,
@@ -71,7 +71,7 @@ export const useMapService = (
       },
       paint: {
         "line-color": location.travelLine?.color ?? "red",
-        "line-width": 8,
+        "line-width": 4,
         "line-opacity": 0.6,
       },
     });
