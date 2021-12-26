@@ -24,6 +24,7 @@ export const DestinationPage: React.FC<DestinationPageProps> = ({
     if (active) {
       setLocation(location);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active]);
   return (
     <DestinationPageWrapper

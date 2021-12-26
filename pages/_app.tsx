@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="stylesheet" href="https://use.typekit.net/dhm4jby.css" />
+        <link rel="stylesheet" href={process.env.NEXT_PUBLIC_FONT_URL} />
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>

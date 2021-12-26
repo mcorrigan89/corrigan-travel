@@ -13,6 +13,7 @@ export const useDestinationMapController = () => {
     if (currentLocation) {
       updateMap(currentLocation);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentLocation]);
 
   return { mapRef };

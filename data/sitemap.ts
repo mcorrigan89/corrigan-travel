@@ -30,12 +30,11 @@ interface SiteMap {
 }
 
 export const siteMap: SiteMap = {
-  title: "Corrigan Travel",
+  title: "Corrigan Travels",
   pages: [
     { title: "Home", page: "" },
     { title: "Destinations", page: "destinations" },
-    { title: "Photos", page: "photos" },
-    { title: "Blog", page: "blog" },
+    { title: "Photos", page: "photos" }
   ],
   locations: [
     {

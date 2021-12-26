@@ -16,8 +16,9 @@ export const HeaderContainer = styled.nav`
 `;
 
 export const HeaderTitle = styled.div`
-  font-family: proxima-nova, sans-serif;
-  font-size: 2rem;
+  font-family: ${props => props.theme.fonts.serif};
+  font-style: italic;
+  font-size: 3rem;
 `;
 
 export const NavigationWrapper = styled.div`
@@ -27,4 +28,5 @@ export const NavigationWrapper = styled.div`
 
 export const NavigationItem = styled.a`
   padding: 0 16px 0 16px;
+  line-height: 3;
 `;

@@ -6,7 +6,8 @@ export const DestinationPageWrapper = styled.div`
 `;
 
 export const DestinationPageTitle = styled.div`
-  font-size: 1.2rem;
+  font-family: ${props => props.theme.fonts.serif};
+  font-size: 1.4rem;
   padding-bottom: 12px;
 `;
 
